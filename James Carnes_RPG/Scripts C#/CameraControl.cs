@@ -45,7 +45,7 @@ public class CameraControl : MonoBehaviour {
 	void Update () 
 	{
 		//need to get x and y of target. Normally this is the Player
-		targetPosition= new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z); 
+		targetPosition= new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, -10); //Here is the issue documented in the paper
 		transform.position = Vector3.Lerp (transform.position, targetPosition, moveSpeed * Time.deltaTime); 
 	}
 }
